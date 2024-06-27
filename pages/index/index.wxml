@@ -1,0 +1,16 @@
+<!-- 消息输入与发送 -->
+<view class="input-container">
+  <input class="input-message" type="text" placeholder="输入消息..." bindinput="inputChange" value="{{inputMessage}}"/>
+  <button class="send-button" bindtap="sendMessage">查询</button>
+  
+</view>
+
+<view class="chat-container">
+  <!-- 消息展示 -->
+  <block wx:for="{{chatHistory}}" wx:for-item="message" wx:key="index">
+    <view class="message">
+      <!-- 显示消息内容 -->
+      <text>{{message.content}}</text>
+    </view>
+  </block>
+</view>
